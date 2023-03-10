@@ -1,0 +1,9 @@
+---
+- name: Test Ansible Playbook
+  connection: local
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Display all variables
+      ansible.builtin.debug:
+        var: hostvars[inventory_hostname]
